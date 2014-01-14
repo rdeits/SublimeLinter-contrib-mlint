@@ -1,0 +1,10 @@
+SublimeLinter-mlint
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to mlint.
+
+** IMPORTANT! **
+
+Before this plugin will activate, you *must*
+follow the installation instructions here:
+
+https://github.com/rdeits/SublimeLinter-contrib-mlint
