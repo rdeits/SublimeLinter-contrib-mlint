@@ -9,8 +9,6 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `mlint` is installed on your system. This should already be taken care if you've installed MATLAB. On OSX using MATLAB version R2013a, it is located in `/Applications/MATLAB_R2013a.app/bin/maci64/`. On Ubuntu, it may be in `/usr/local/MATLAB/R2013a/bin/glnx86/` or similar.
 
-Once `mlint` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This  This may not be as straightforward as you think, so please read about [how linter executables are located][locating-executables] in the documentation.
-
 ### Linter configuration
 In order for `mlint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
