@@ -19,16 +19,7 @@ class Mlint(Linter):
 
     syntax = 'matlab'
     cmd = 'mlint @'
-    executable = 'mlint'
     regex = r'L (?P<line>\d+) \(C (?P<col>\d+)-?(?P<c_end>\d+)?\): (?P<message>.*)'
-    multiline = False
-    line_col_base = (1, 1)
     tempfile_suffix = '-'
-    error_stream = util.STREAM_BOTH
-    selectors = {}
-    word_re = None
-    defaults = {}
     default_type = highlight.WARNING
-    inline_settings = None
-    inline_overrides = None
     comment_re = r'\s*%'
