@@ -15,10 +15,10 @@ from SublimeLinter.lint import Linter, util, highlight
 
 class Mlint(Linter):
 
-    """Provides an interface to mlint."""
+    """Provides an interface to mlint, the standalone MATLAB linter"""
 
     syntax = 'matlab'
-    cmd = 'mlint @'
+    cmd = 'mlint'
     regex = r'L (?P<line>\d+) \(C (?P<col>\d+)-?(?P<c_end>\d+)?\): (?P<message>.*)'
     tempfile_suffix = '-'
     default_type = highlight.WARNING
