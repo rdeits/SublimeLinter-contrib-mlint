@@ -1,7 +1,7 @@
 SublimeLinter-contrib-mlint
 ================================
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [mlint](http://www.mathworks.com/help/matlab/ref/mlint.html), the MATLAB linter provided by the MathWorks. It will be used with files that have the “matlab” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [mlint](http://www.mathworks.com/help/matlab/ref/mlint.html), the MATLAB linter provided by the MathWorks. It will be used with files that have the “matlab” syntax. This plugin uses `mlint` rather than the MathWorks recommendation of `checkcode` because `mlint` can be run as a standalone executable, while `checkcode` requires starting up an entire MATLAB environment. 
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
