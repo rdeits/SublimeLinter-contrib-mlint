@@ -10,7 +10,7 @@
 
 """This module exports the Mlint plugin class."""
 
-from SublimeLinter.lint import Linter, util, highlight
+from SublimeLinter.lint import Linter, const
 
 
 class Mlint(Linter):
@@ -19,7 +19,9 @@ class Mlint(Linter):
 
     syntax = 'matlab'
     cmd = 'mlint'
-    regex = r'L (?P<line>\d+) \(C (?P<col>\d+)-?(?P<c_end>\d+)?\): (?P<message>.*)'
+    regex = (r'L (?P<line>\d+) \(C (?P<col>\d+)-?(?P<c_end>\d+)?\)'
+             r'((?P<error>: Parse error at [^:]*:)|(?P<warning>: ))'
+             r'(?P<message>.*)')
     tempfile_suffix = '-'
-    default_type = highlight.WARNING
+    default_type = const.WARNING
     comment_re = r'\s*%'
