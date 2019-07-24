@@ -24,12 +24,13 @@ class Mlint(Linter):
 
     """Provides an interface to mlint, the standalone MATLAB linter"""
 
-    syntax = 'matlab'
     cmd = ('mlint', '$file')
     regex = (r'L (?P<line>\d+) \(C (?P<col>\d+)-?(?P<c_end>\d+)?\)'
              r'((?P<error>: Parse error at [^:]*:)|(?P<warning>: ))'
              r'(?P<message>.*)')
     tempfile_suffix = '-'
     default_type = WARNING
-    comment_re = r'\s*%'
     error_stream = util.STREAM_STDERR
+    defaults = {
+        'selector': 'source.matlab'
+    }
